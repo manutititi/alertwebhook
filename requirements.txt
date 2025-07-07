@@ -1,5 +1,5 @@
 fastapi
 uvicorn
 pydantic
-requests
+httpx
 python-telegram-bot==20.8

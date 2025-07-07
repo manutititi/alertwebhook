@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  webhook:
+    build: .
+    container_name: alertwebhook
+    ports:
+      - "9094:9094"
+    volumes:
+      - ./app:/app/app
+      - ./logs:/app/logs
+    networks:
+      - obs
+    restart: unless-stopped
+    environment:
+      - DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/1391708038036979762/6VVOUsF2TwaNhIDCAOtr1pxu6h9TF4NK12EnHTALn6DK6o4GBEKbzUvHVdBG5-B6oTf0
+      - TIMEZONE=Europe/Madrid
+
+networks:
+  obs:
+    external: true
+
