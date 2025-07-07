@@ -13,7 +13,7 @@ services:
       - obs
     restart: unless-stopped
     environment:
-      - DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/1391708038036979762/6VVOUsF2TwaNhIDCAOtr1pxu6h9TF4NK12EnHTALn6DK6o4GBEKbzUvHVdBG5-B6oTf0
+      - DISCORD_WEBHOOK_URL=
       - TIMEZONE=Europe/Madrid
 
 networks:
